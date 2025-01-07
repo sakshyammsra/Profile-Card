@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f9; /* Soft minimal off-white background */
+    }
+
+    .profile-card {
+      background: #fff;
+      border-radius: 25px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      max-width: 420px;
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #6a11cb, #007bff);
+      padding: 50px;
+      border-bottom-left-radius: 50% 20%;
+      border-bottom-right-radius: 50% 20%;
+      position: relative;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      position: absolute;
+      bottom: -65px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: transform 0.4s ease;
+    }
+
+    .profile-card:hover .profile-img {
+      transform: translateX(-50%) scale(1.1);
+    }
+
+    .card-body {
+      padding: 90px 20px 40px;
+    }
+
+    .name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      color: #6a11cb;
+      margin: 5px 0 20px;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.8;
+      padding: 0 15px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 15px;
+    }
+
+    .icon {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s, box-shadow 0.3s ease;
+    }
+
+    .linkedin {
+      background-color: #0077b5;
+    }
+
+    .instagram {
+      background-color: #e4405f;
+    }
+
+    .email {
+      background-color: #f39c12;
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="card-header">
+      <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+    </div>
+    <div class="card-body">
+      <h2 class="name">Sakshyam Mishra</h2>
+      <p class="title">CSIT Student & Cybersecurity Enthusiast</p>
+      <p class="description">
+        Passionate about ethical hacking, web development, and creating secure systems.  
+        Dedicated to learning and growing in the tech world.
+      </p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/" target="_blank" class="icon linkedin">
+          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="icon instagram">
+          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram">
+        </a>
+        <a href="mailto:gmail@example.com" class="icon email">
+          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/email.png" alt="Email">
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
